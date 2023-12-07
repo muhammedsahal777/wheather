@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles/style.css"> 
+</head>
+<body>
+<div class="center">
+    <h1>Check the Weather</h1>
+    <form id="myForm" method="post">
+        <label for="latInput">Latitude</label><br>
+        <input type="text" id="latInput" name="lat"><br>
+  
+        <label for="lonInput">Longitude</label><br>
+        <input type="text" id="lonInput" name="lon"><br><br>
+
+        <input id="get" type="submit" value="SUBMIT" formaction="/">
+    </form>
+
+</div>
+<div class="content">
+    <% if (locals.content) { %>
+        <%= content %> 
+    <% } else {%>
+        <p>Enter the Latitude and Longitude.</p>
+        <% } %>
+</div>
+</body>
+</html>
